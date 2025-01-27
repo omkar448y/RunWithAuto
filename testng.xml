@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="2">
+	<test name="Cucumber Tests">
+		<!-- Smoke Test Suite -->
+		<parameter name="cucumber.filter.tags" value="@Smoke" />
+
+		<classes>
+			<class name="TestRunner.TestRunner" />
+
+		</classes>
+	</test>
+
+	<!-- Regression Test Suite -->
+	<test name="Cucumber Regression Tests">
+		<parameter name="cucumber.filter.tags" value="@Regression" />
+		<classes>
+			<class name="TestRunner.TestRunner" />
+		</classes>
+	</test>
+
+
+</suite>
